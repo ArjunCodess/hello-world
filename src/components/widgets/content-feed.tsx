@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 
+// Product Hunt API key - REPLACE WITH YOUR OWN KEY
+const PRODUCT_HUNT_API_KEY = 'sQwwHMdN5IYxkS4tL8NsebCQJnMUvokMQNIgNRAcEqU';
+
 interface DevToPost {
   title: string;
   url: string;
@@ -70,7 +73,7 @@ export function ContentFeed({ type }: ContentFeedProps) {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer sQwwHMdN5IYxkS4tL8NsebCQJnMUvokMQNIgNRAcEqU',
+            'Authorization': `Bearer ${PRODUCT_HUNT_API_KEY}`,
           },
           body: JSON.stringify({ query }),
         });
