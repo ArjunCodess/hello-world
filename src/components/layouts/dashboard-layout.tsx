@@ -4,6 +4,7 @@ import { TodoList } from '../widgets/todo-list'
 import { NotesEditor } from '../widgets/notes-editor'
 import { ContentFeed } from '../widgets/content-feed'
 import { QuoteDisplay } from '../widgets/quote-display'
+import { QuickLinks } from '../widgets/quick-links'
 import { CollapsibleSection } from '../ui/collapsible-section'
 
 export function DashboardLayout() {
@@ -30,6 +31,9 @@ export function DashboardLayout() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Productivity Column */}
           <div className="space-y-6">
+            <CollapsibleSection title="Quick Links" icon="🔗">
+              <QuickLinks />
+            </CollapsibleSection>
             <CollapsibleSection title="Todo List" icon="✨">
               <TodoList />
             </CollapsibleSection>
